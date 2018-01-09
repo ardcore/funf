@@ -1,0 +1,47 @@
+{
+  "name": "funf",
+  "version": "0.6.0",
+  "description": "Minimal set of utilities needed to unblock functional programming.",
+  "main": "dist/funf.cjs.js",
+  "module": "dist/funf.esm.js",
+  "browser": "dist/funf.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "pretest": "npm run build",
+    "test": "tape spec/**/*.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardcore/funf.git"
+  },
+  "keywords": [
+    "FP",
+    "functional",
+    "programming",
+    "curry",
+    "pipe",
+    "pick",
+    "omit",
+    "minimal"
+  ],
+  "author": "Szymon Pilkowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ardcore/funcore/issues"
+  },
+  "homepage": "https://github.com/ardcore/funcore#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "rollup": "^0.53.3",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  }
+}
