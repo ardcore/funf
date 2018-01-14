@@ -132,7 +132,7 @@ var omit = function omit(keys, obj) {
   }, {});
 };
 
-// [a] -> [b] -> [(a, b)]
+// ([a], [b]) -> [[a, b]]
 var zip = function zip(arr) {
   for (var _len5 = arguments.length, arrs = Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++) {
     arrs[_key5 - 1] = arguments[_key5];
@@ -145,6 +145,11 @@ var zip = function zip(arr) {
   });
 };
 
+// (a) -> ({a}) -> a
+var prop = function prop(p, obj) {
+  return obj[p];
+};
+
 module.exports.pipe = pipe;
 module.exports.compose = compose;
 module.exports.curry = curry;
@@ -153,3 +158,4 @@ module.exports.tail = tail;
 module.exports.pick = curry(pick);
 module.exports.omit = curry(omit);
 module.exports.zip = zip;
+module.exports.prop = curry(prop);
