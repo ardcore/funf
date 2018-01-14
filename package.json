@@ -1,6 +1,6 @@
 {
   "name": "funf",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Minimal set of utilities needed to unblock functional programming.",
   "main": "dist/funf.cjs.js",
   "module": "dist/funf.esm.js",
